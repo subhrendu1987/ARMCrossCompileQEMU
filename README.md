@@ -1,4 +1,9 @@
 # QEMU based Cross Compilation toolchain for ARM
+## Requirements on Hosts system
+### Mac OS X with 
+	- ports
+	- brew
+	-`brew install qemu`/`ports install qemu`
 ## Steps to build Virtual-PI using Raspbian-Jessy 
  Credits https://blog.agchapman.com/using-qemu-to-emulate-a-raspberry-pi/
 1. Install QEMU (On mac using `brew install qemu`/`ports install qemu`; On Debian use `apt install qemu`)

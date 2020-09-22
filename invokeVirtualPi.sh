@@ -11,7 +11,11 @@ sudo qemu-system-arm \
 -M versatilepb \
 -no-reboot \
 -serial stdio \
--netdev tap,id=mynet0,ifname=tap0,script=no,downscript=no \
--device e1000,netdev=mynet0,mac=52:55:00:d1:55:01
+-device e1000,netdev=net0 \
+-netdev user,id=net0,hostfwd=tcp::5555-:22
+
+#-netdev tap,id=mynet0,ifname=tap0,script=no,downscript=no \
+#-device e1000,netdev=mynet0,mac=52:55:00:d1:55:01
+
 #-net nic -net user \
 #-net tap,ifname=utun0,script=no,downscript=no
